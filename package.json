@@ -1,0 +1,42 @@
+{
+  "name": "spookyback",
+  "version": "1.0.0",
+  "description": "Horror Movie Reccomendation site.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "debug": "nodemon --inspect app.js",
+    "dev": "concurrently \"npm run debug\""
+  },
+  "proxy": "http://localhost:5000",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jork41989/SpookyBack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jork41989/SpookyBack/issues"
+  },
+  "homepage": "https://github.com/jork41989/SpookyBack#readme",
+  "dependencies": {
+    "aws-sdk": "^2.580.0",
+    "axios": "^0.19.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^2.2.0",
+    "mongoose": "^5.7.5",
+    "multer": "^1.4.2",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^11.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
