@@ -5,6 +5,7 @@ module.exports = function validateUserInput(data) {
   let errors = {};
 
   data.email = validText(data.email) ? data.email : '';
+  data.username = validText(data.username) ? data.username : '';
 
   if (!Validator.isEmail(data.email)) {
     errors.email = 'Email is invalid';
@@ -14,6 +15,9 @@ module.exports = function validateUserInput(data) {
     errors.email = 'Email field is required';
   }
 
+  if (Validator.isEmpty(data.username)) {
+    errors.username = 'Username field is required';
+  }
 
   return {
     errors,
