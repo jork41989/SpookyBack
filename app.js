@@ -9,6 +9,7 @@ const path = require('path');
 
 
 const users = require("./routes/api/users");
+const movies = require("./routes/api/movies")
 
 
 
@@ -30,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use("/api/users", users);
-
+app.use("/api/movies", movies)
 
 
 

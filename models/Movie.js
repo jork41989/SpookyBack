@@ -21,5 +21,4 @@ const MovieSchema = new Schema({
   }
 })
 
-const User = mongoose.model('users', UserSchema);
-module.exports = User
+module.exports = Movie = mongoose.model('movie', MovieSchema);

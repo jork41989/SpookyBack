@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const validateMovieInput = require('../../validation/movie');
 
+const Movie = require('../../models/Movie');
 
 router.post('/newMovie',
   passport.authenticate('jwt', { session: false }),
@@ -35,3 +36,6 @@ router.get('/:id', (req, res) => {
       .catch(err => 
         res.status(404).json({movienotfound: 'Movie not found with that id'}))
 });
+
+
+module.exports = router;
