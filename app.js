@@ -4,6 +4,7 @@ const db = process.env.MONGO_URI || require('./config/keys').mongoURI;
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
+var cors = require('cors');
 const path = require('path');
 
 
@@ -18,7 +19,9 @@ mongoose
   .then(() => console.log("Connected to MongoDB successfully"))
   .catch(err => console.log(err));
 
-app.get("/", (req, res) => res.send("Hello World!!"));
+
+
+app.get("/", (req, res) => res.send("word Up!"));
 
 app.use(passport.initialize());
 require('./config/passport')(passport);
@@ -27,6 +30,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use("/api/users", users);
+
+
 
 
 
