@@ -3,19 +3,23 @@ const Schema = mongoose.Schema;
 
 
 const MovieSchema = new Schema({
-  title: {
+  Title: {
     type: String,
     required: true
   },
-  poster_url: {
+  Year: {
     type: String,
     required: true
   },
-  movie_db_id: {
+  Poster: {
     type: String,
     required: true
   },
-  category: {
+  imdbID: {
+    type: String,
+    required: true
+  },
+  Genre: {
     type: String,
     required: true
   }

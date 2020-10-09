@@ -10,16 +10,15 @@ router.post('/newMovie',
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
   const { errors, isValid } = validateMovieInput(req.body);
-
   if (!isValid) {
     return res.status(400).json(errors);
   }
-
   const newMovie = new Movie({
-    title: req.body.title,
-    poster_url: req.body.poster_url,
-    movie_db_id: req.body.movie_db_id,
-    category: req.body.category
+    Title: req.body.Title,
+    Year: req.body.Year,
+    Poster: req.body.Poster,
+    imdbID: req.body.imdbID,
+    Genre: req.body.Genre
   })
 
   newMovie.save()
