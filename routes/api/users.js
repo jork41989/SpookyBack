@@ -23,7 +23,6 @@ router.post('/login', (req, res) => {
       .then(user => {
        
         try{
-          console.log(user)
           const payload = {
             id: user.id,
             username: user.username,
